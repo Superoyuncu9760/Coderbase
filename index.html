@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <h1>Idle Game</h1>
+    <button onclick="toggleTheme()">Temayı Değiştir</button>
+    <p>Para: <span id="money">0</span></p>
+    <p>Rebirth: <span id="rebirth">0</span></p>
+    <p>Süper Rebirth: <span id="superRebirth">0</span></p>
+    <button onclick="buyUpgrade1()">Para Yükseltmesi Al (<span id="upgrade1Cost">10</span> Para)</button>
+    <button onclick="buyUpgrade2()">Hız Yükseltmesi Al (<span id="upgrade2Cost">50</span> Para)</button>
+    <button onclick="rebirthUpgrade()">Rebirth (<span id="rebirthCost">100</span> Para)</button>
+    <button onclick="superRebirthUpgrade()">Süper Rebirth (10 Rebirth)</button>
+    <p>Para/saniye: <span id="moneyPerSecond">1</span></p>
+    <button onclick="saveGame()">Oyunu Kaydet</button>
+    <button onclick="resetProgress()" class="reset-button">İlerlemeyi Sıfırla</button>
+    
+    <div id="resetConfirm" style="display: none;">
+        <p>İlerlemeyi sıfırlamak istediğinizden emin misiniz? Bu işlem geri alınamaz.</p>
+        <button onclick="cancelReset()">Vazgeçtim, devam edeceğim</button>
+        <button onclick="confirmReset()" class="confirm-reset">Evet eminim. Tüm çabamı boşuna gidereceğim.</button>
+    </div>
+    
+    <h2>İstatistikler</h2>
+    <ul>
+        <li>Toplam Para: <span id="totalMoney">0</span></li>
+        <li>Toplam Rebirth: <span id="totalRebirth">0</span></li>
+        <li>Toplam Süper Rebirth: <span id="totalSuperRebirth">0</span></li>
+        <li>Toplam Oyun Süresi: <span id="totalGameTime">0</span> saniye</li>
+    </ul>
+
+    <hr>
+    <h2>Oyun Sürümü: <span id="version">0.5 beta</span></h2>
+    <h3>Sürüm Günlüğü:</h3>
+    <ul id="changelog">
+        <h4>0.1 beta</h4>
+        <ul>
+            <li>Oyun deneme aşamasında. Temel özellikler eklendi.</li>
+        </ul>
+        <h4>0.2 beta</h4>
+        <ul>
+            <li>Yükseltme Fiyatları: İlk yükseltme fiyatı her satın alımda %10 artar. İkinci yükseltme ise kazanma süresini %5 azaltır ve her satın alımda fiyatı %20 artar.</li>
+            <li>Tema: Temalar daha dengeli bir koyu gri ve açık gri tonlarına sahiptir.</li>
+            <li>CSS: Eklenen CSS, butonları ve metinleri daha şık hale getirir.</li>
+        </ul>
+        <h4>0.3 beta</h4>
+        <ul>
+            <li>Kaydetme ve sıfırlama özellikleri eklendi. Otomatik kaydetme her 15 saniyede bir yapılır.</li>
+            <li>Karanlık tema (#000000) eklendi.</li>
+            <li>Yükseltme maliyetleri dinamik olarak güncellenir.</li>
+            <li>Süper Rebirth, 10 Rebirth gerektirir ve maliyeti %10 artar.</li>
+            <li>Rebirth ve Süper Rebirth etkileri eklendi.</li>
+        </ul>
+        <h5>0.4 beta</h5>
+        <ul>
+            <li>HTML ve JavaScript Düzeni iyileştirildi.</li>
+            <li>Stil Geliştirmeleri yapıldı.</li>
+            <li>Butonlar için hover ve aktif durum efektleri eklendi, bu da kullanıcı etkileşimini daha iyi hale getirdi.</li>
+            <li>Temaların geçiş efektleri geliştirildi ve sayfanın genel görünümü daha modern bir hale getirildi.</li>
+        <h6>0.5 beta</h6>
+        <li>Rebirth işlemi sırasında tüm para sıfırlanmama sorunu giderildi.</li>
+        <li>Rebirth maliyeti her rebirth sonrası %30 artacak şekilde güncellendi.</li>
+        <li>Rebirth maliyetinin dinamik olarak kullanıcı arayüzünde gösterilmesi sağlandı.</li>
+        </ul>
+    </ul>
+    
+    <script src="game.js"></script>
+</body>
+</html>
