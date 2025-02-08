@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.black-mode {
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004494;
+}
+
+/* İlerlemeyi Sıfırla Butonu */
+button.reset-button {
+    background-color: #FF0000;
+    color: white;
+}
+
+button.reset-button:hover {
+    background-color: #CC0000;
+}
+
+/* İlerlemeyi Onayla Butonu */
+button.confirm-reset {
+    background-color: #FF0000;
+    color: white;
+}
+
+button.confirm-reset:hover {
+    background-color: #CC0000;
+}
+
+p, ul {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+#resetConfirm {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.light-mode #resetConfirm {
+    background-color: #e0e0e0;
+}
+
+.dark-mode #resetConfirm {
+    background-color: #444;
+}
+
+.black-mode #resetConfirm {
+    background-color: #111;
+}
+
+#resetConfirm p {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
